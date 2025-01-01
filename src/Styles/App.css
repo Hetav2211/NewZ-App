@@ -1,0 +1,39 @@
+/* Comprehensive Overflow Prevention */
+html, body {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* Responsive Containers */
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  /* Specific Component Constraints */
+  .news-list,
+  .category-page,
+  .home-page {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
