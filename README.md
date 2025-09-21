@@ -1,70 +1,126 @@
-# Getting Started with Create React App
+# NewZ App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive news reader built with React, React Router, and Axios — powered by NewsAPI. Browse trending stories, filter by category, and open detailed views in a clean, fast UI.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Badges
 
-### `npm start`
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=000&labelColor=fff)
+![React Router](https://img.shields.io/badge/React%20Router-7-CA4245?logo=reactrouter&logoColor=fff)
+![Axios](https://img.shields.io/badge/Axios-HTTP-5A29E4?logo=axios&logoColor=fff)
+![Build with CRA](https://img.shields.io/badge/Create%20React%20App-5.0.1-09D3AC?logo=create-react-app&logoColor=000)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+![Repo Stars](https://img.shields.io/github/stars/Hetav2211/NewZ-App?style=social)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Overview
 
-### `npm test`
+NewZ App is a lightweight, single‑page application that surfaces the latest headlines and category‑based news using the NewsAPI. It demonstrates practical React patterns: client-side routing, service-based API access, and modular components with a clean CSS styling approach.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Category-based browsing (e.g., business, sports, technology)
+- Detail view for a selected article
+- Client-side routing with React Router
+- Responsive layout and clean typography
+- Axios-based API layer
+- Simple, approachable code structure for learning and extension
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Tech Stack
 
-### `npm run eject`
+- React 19
+- React Router 7
+- Axios
+- Create React App (CRA) 5
+- CSS
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Getting Started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Prerequisites
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Node.js ≥ 18 (LTS recommended)
+- npm ≥ 8
 
-## Learn More
+### Installation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+git clone https://github.com/Hetav2211/NewZ-App.git
+cd NewZ-App
+npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Environment Variables
 
-### Code Splitting
+This project reads your NewsAPI key from an environment variable at build time.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Create a `.env` file in the project root with:
 
-### Analyzing the Bundle Size
+```
+REACT_APP_NEWS_API_KEY=your_newsapi_key_here
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Optionally, if you maintain a custom base URL, add:
 
-### Making a Progressive Web App
+```
+REACT_APP_NEWS_API_BASE=https://newsapi.org/v2
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Notes:
+- Variable names must start with `REACT_APP_` to be exposed to the client (CRA convention).
+- Changing `.env` requires restarting the dev server.
 
-### Advanced Configuration
+### Run Locally
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+npm start
+```
 
-### Deployment
+### Available Scripts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- `npm start` — Start dev server
+- `npm build` — Production build
+- `npm test` — Run tests (if present)
+- `npm run eject` — Eject CRA config (irreversible)
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Routing
+
+Defined in `src/App.js`:
+
+- `/` → Home
+- `/category/:category` → CategoryPage
+- `/details` → Detailpage
+
+Example: `/category/technology`
+
+---
+
+
+## Screenshots
+
+![Home](assets/image1.png)
+---
+![Category](assets/image2.png)
+---
+![Detail](assets/image3.png)
+
+---
+
+## Acknowledgements
+
+- Data by [NewsAPI.org](https://newsapi.org/)
+- Bootstrapped with [Create React App](https://create-react-app.dev/)
+- Routing by [React Router](https://reactrouter.com/)
+
+---
+
+Built with ❤️ by [Hetav2211](https://github.com/Hetav2211)
